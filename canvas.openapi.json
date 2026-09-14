@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://canvas.northeastern.edu/api",
+      "url": "https://northeastern.instructure.com/api",
       "description": "Northeastern University Canvas API"
     }
   ],
@@ -118164,12 +118164,12 @@
     }
   },
   "x-canvas-generation": {
-    "generatedAt": "2026-09-14T04:57:10+00:00",
+    "generatedAt": "2026-09-14T05:25:10+00:00",
     "sourceIndex": "https://canvas.instructure.com/doc/api/api-docs.json",
     "sourceSwaggerVersion": "1.2",
     "sourceApiVersion": "1.0",
     "resourceDeclarationsFetched": 144,
-    "targetServer": "https://canvas.northeastern.edu/api",
+    "targetServer": "https://northeastern.instructure.com/api",
     "duplicateRouteDeclarationsResolved": 1,
     "generator": "tools/generate_canvas_openapi.py"
   }

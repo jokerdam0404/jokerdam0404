@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-14T04:57:10+00:00",
+  "generated_at": "2026-09-14T05:25:10+00:00",
   "source_index": "https://canvas.instructure.com/doc/api/api-docs.json",
   "source_swagger_version": "1.2",
   "resource_count": 144,
   "path_count": 789,
   "operation_count": 1117,
   "schema_count": 288,
-  "target_server": "https://canvas.northeastern.edu/api",
-  "output_bytes": 4461797,
-  "sha256": "4cf1a8a07bae81c4f8c4a8b07629494168232adcd719d686b261b031a3f2e104",
+  "target_server": "https://northeastern.instructure.com/api",
+  "output_bytes": 4461807,
+  "sha256": "d4320c8ffdd2954921b134e0dd44bb72e8447698c71923dfdebfe2bba14261c3",
   "duplicate_route_declarations": [
     {
       "path": "/v1/conversations/find_recipients",
