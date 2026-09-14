@@ -1,0 +1,988 @@
+{
+  "generated_at": "2026-09-14T04:57:10+00:00",
+  "source_index": "https://canvas.instructure.com/doc/api/api-docs.json",
+  "source_swagger_version": "1.2",
+  "resource_count": 144,
+  "path_count": 789,
+  "operation_count": 1117,
+  "schema_count": 288,
+  "target_server": "https://canvas.northeastern.edu/api",
+  "output_bytes": 4461797,
+  "sha256": "4cf1a8a07bae81c4f8c4a8b07629494168232adcd719d686b261b031a3f2e104",
+  "duplicate_route_declarations": [
+    {
+      "path": "/v1/conversations/find_recipients",
+      "method": "get",
+      "source": "https://canvas.instructure.com/doc/api/search.json"
+    }
+  ],
+  "resource_sources": [
+    "https://canvas.instructure.com/doc/api/access_tokens.json",
+    "https://canvas.instructure.com/doc/api/accessibility_course_scans.json",
+    "https://canvas.instructure.com/doc/api/accessibility_course_statistics.json",
+    "https://canvas.instructure.com/doc/api/account_calendars.json",
+    "https://canvas.instructure.com/doc/api/account_domain_lookups.json",
+    "https://canvas.instructure.com/doc/api/account_notifications.json",
+    "https://canvas.instructure.com/doc/api/account_reports.json",
+    "https://canvas.instructure.com/doc/api/accounts.json",
+    "https://canvas.instructure.com/doc/api/accounts_(lti).json",
+    "https://canvas.instructure.com/doc/api/admins.json",
+    "https://canvas.instructure.com/doc/api/ai_conversations.json",
+    "https://canvas.instructure.com/doc/api/ai_experiences.json",
+    "https://canvas.instructure.com/doc/api/analytics.json",
+    "https://canvas.instructure.com/doc/api/announcement_external_feeds.json",
+    "https://canvas.instructure.com/doc/api/announcements.json",
+    "https://canvas.instructure.com/doc/api/api_token_scopes.json",
+    "https://canvas.instructure.com/doc/api/appointment_groups.json",
+    "https://canvas.instructure.com/doc/api/assessment_question_banks.json",
+    "https://canvas.instructure.com/doc/api/asset_processor.json",
+    "https://canvas.instructure.com/doc/api/assignment_extensions.json",
+    "https://canvas.instructure.com/doc/api/assignment_groups.json",
+    "https://canvas.instructure.com/doc/api/assignments.json",
+    "https://canvas.instructure.com/doc/api/authentication_providers.json",
+    "https://canvas.instructure.com/doc/api/authentications_log.json",
+    "https://canvas.instructure.com/doc/api/blackout_dates.json",
+    "https://canvas.instructure.com/doc/api/block_editor_template.json",
+    "https://canvas.instructure.com/doc/api/blueprint_courses.json",
+    "https://canvas.instructure.com/doc/api/bookmarks.json",
+    "https://canvas.instructure.com/doc/api/brand_configs.json",
+    "https://canvas.instructure.com/doc/api/calendar_events.json",
+    "https://canvas.instructure.com/doc/api/canvas_career_experiences.json",
+    "https://canvas.instructure.com/doc/api/canvas_career_user_context.json",
+    "https://canvas.instructure.com/doc/api/collaborations.json",
+    "https://canvas.instructure.com/doc/api/comm_messages.json",
+    "https://canvas.instructure.com/doc/api/communication_channels.json",
+    "https://canvas.instructure.com/doc/api/conferences.json",
+    "https://canvas.instructure.com/doc/api/content_exports.json",
+    "https://canvas.instructure.com/doc/api/content_migrations.json",
+    "https://canvas.instructure.com/doc/api/content_security_policy_settings.json",
+    "https://canvas.instructure.com/doc/api/content_shares.json",
+    "https://canvas.instructure.com/doc/api/conversations.json",
+    "https://canvas.instructure.com/doc/api/course_audit_log.json",
+    "https://canvas.instructure.com/doc/api/course_pace.json",
+    "https://canvas.instructure.com/doc/api/course_quiz_extensions.json",
+    "https://canvas.instructure.com/doc/api/course_reports.json",
+    "https://canvas.instructure.com/doc/api/courses.json",
+    "https://canvas.instructure.com/doc/api/custom_gradebook_columns.json",
+    "https://canvas.instructure.com/doc/api/developer_key_account_bindings.json",
+    "https://canvas.instructure.com/doc/api/developer_keys.json",
+    "https://canvas.instructure.com/doc/api/discovery_pages.json",
+    "https://canvas.instructure.com/doc/api/discussion_topics.json",
+    "https://canvas.instructure.com/doc/api/e_portfolios.json",
+    "https://canvas.instructure.com/doc/api/e_pub_exports.json",
+    "https://canvas.instructure.com/doc/api/enrollment_terms.json",
+    "https://canvas.instructure.com/doc/api/enrollments.json",
+    "https://canvas.instructure.com/doc/api/error_reports.json",
+    "https://canvas.instructure.com/doc/api/external_tools.json",
+    "https://canvas.instructure.com/doc/api/favorites.json",
+    "https://canvas.instructure.com/doc/api/feature_flags.json",
+    "https://canvas.instructure.com/doc/api/files.json",
+    "https://canvas.instructure.com/doc/api/grade_change_log.json",
+    "https://canvas.instructure.com/doc/api/gradebook_history.json",
+    "https://canvas.instructure.com/doc/api/grading_period_sets.json",
+    "https://canvas.instructure.com/doc/api/grading_periods.json",
+    "https://canvas.instructure.com/doc/api/grading_standards.json",
+    "https://canvas.instructure.com/doc/api/graph_ql.json",
+    "https://canvas.instructure.com/doc/api/group_categories.json",
+    "https://canvas.instructure.com/doc/api/groups.json",
+    "https://canvas.instructure.com/doc/api/history.json",
+    "https://canvas.instructure.com/doc/api/inst_access_tokens.json",
+    "https://canvas.instructure.com/doc/api/jw_ts.json",
+    "https://canvas.instructure.com/doc/api/late_policy.json",
+    "https://canvas.instructure.com/doc/api/learning_object_dates.json",
+    "https://canvas.instructure.com/doc/api/line_items.json",
+    "https://canvas.instructure.com/doc/api/live_assessments.json",
+    "https://canvas.instructure.com/doc/api/logins.json",
+    "https://canvas.instructure.com/doc/api/lti_context_controls.json",
+    "https://canvas.instructure.com/doc/api/lti_launch_definitions.json",
+    "https://canvas.instructure.com/doc/api/lti_registrations.json",
+    "https://canvas.instructure.com/doc/api/lti_resource_links.json",
+    "https://canvas.instructure.com/doc/api/media_objects.json",
+    "https://canvas.instructure.com/doc/api/moderated_grading.json",
+    "https://canvas.instructure.com/doc/api/modules.json",
+    "https://canvas.instructure.com/doc/api/names_and_role.json",
+    "https://canvas.instructure.com/doc/api/new_quiz_items.json",
+    "https://canvas.instructure.com/doc/api/new_quizzes.json",
+    "https://canvas.instructure.com/doc/api/new_quizzes_accommodations.json",
+    "https://canvas.instructure.com/doc/api/new_quizzes_reports.json",
+    "https://canvas.instructure.com/doc/api/notice_handlers.json",
+    "https://canvas.instructure.com/doc/api/notification_preferences.json",
+    "https://canvas.instructure.com/doc/api/originality_reports.json",
+    "https://canvas.instructure.com/doc/api/outcome_groups.json",
+    "https://canvas.instructure.com/doc/api/outcome_imports.json",
+    "https://canvas.instructure.com/doc/api/outcome_results.json",
+    "https://canvas.instructure.com/doc/api/outcomes.json",
+    "https://canvas.instructure.com/doc/api/pages.json",
+    "https://canvas.instructure.com/doc/api/peer_reviews.json",
+    "https://canvas.instructure.com/doc/api/plagiarism_detection_platform_assignments.json",
+    "https://canvas.instructure.com/doc/api/plagiarism_detection_platform_users.json",
+    "https://canvas.instructure.com/doc/api/plagiarism_detection_submissions.json",
+    "https://canvas.instructure.com/doc/api/planner.json",
+    "https://canvas.instructure.com/doc/api/poll_choices.json",
+    "https://canvas.instructure.com/doc/api/poll_sessions.json",
+    "https://canvas.instructure.com/doc/api/poll_submissions.json",
+    "https://canvas.instructure.com/doc/api/polls.json",
+    "https://canvas.instructure.com/doc/api/portfolio_notifications.json",
+    "https://canvas.instructure.com/doc/api/proficiency_ratings.json",
+    "https://canvas.instructure.com/doc/api/progress.json",
+    "https://canvas.instructure.com/doc/api/public_jwk.json",
+    "https://canvas.instructure.com/doc/api/quiz_assignment_overrides.json",
+    "https://canvas.instructure.com/doc/api/quiz_extensions.json",
+    "https://canvas.instructure.com/doc/api/quiz_ip_filters.json",
+    "https://canvas.instructure.com/doc/api/quiz_question_groups.json",
+    "https://canvas.instructure.com/doc/api/quiz_questions.json",
+    "https://canvas.instructure.com/doc/api/quiz_reports.json",
+    "https://canvas.instructure.com/doc/api/quiz_statistics.json",
+    "https://canvas.instructure.com/doc/api/quiz_submission_events.json",
+    "https://canvas.instructure.com/doc/api/quiz_submission_files.json",
+    "https://canvas.instructure.com/doc/api/quiz_submission_questions.json",
+    "https://canvas.instructure.com/doc/api/quiz_submission_user_list.json",
+    "https://canvas.instructure.com/doc/api/quiz_submissions.json",
+    "https://canvas.instructure.com/doc/api/quizzes.json",
+    "https://canvas.instructure.com/doc/api/result.json",
+    "https://canvas.instructure.com/doc/api/roles.json",
+    "https://canvas.instructure.com/doc/api/rubrics.json",
+    "https://canvas.instructure.com/doc/api/sandboxes.json",
+    "https://canvas.instructure.com/doc/api/score.json",
+    "https://canvas.instructure.com/doc/api/search.json",
+    "https://canvas.instructure.com/doc/api/sections.json",
+    "https://canvas.instructure.com/doc/api/services.json",
+    "https://canvas.instructure.com/doc/api/shared_brand_configs.json",
+    "https://canvas.instructure.com/doc/api/sis_import_errors.json",
+    "https://canvas.instructure.com/doc/api/sis_imports.json",
+    "https://canvas.instructure.com/doc/api/sis_integration.json",
+    "https://canvas.instructure.com/doc/api/smart_search.json",
+    "https://canvas.instructure.com/doc/api/study_assist.json",
+    "https://canvas.instructure.com/doc/api/submission_comments.json",
+    "https://canvas.instructure.com/doc/api/submissions.json",
+    "https://canvas.instructure.com/doc/api/tabs.json",
+    "https://canvas.instructure.com/doc/api/temporary_enrollment_pairings.json",
+    "https://canvas.instructure.com/doc/api/user_observees.json",
+    "https://canvas.instructure.com/doc/api/users.json",
+    "https://canvas.instructure.com/doc/api/webhooks_subscriptions_for_plagiarism_platform.json",
+    "https://canvas.instructure.com/doc/api/what_if_grades.json"
+  ],
+  "model_sources": {
+    "AccessibilityCourseStatistic": [
+      "https://canvas.instructure.com/doc/api/accessibility_course_statistics.json"
+    ],
+    "AccommodationResponse": [
+      "https://canvas.instructure.com/doc/api/new_quizzes_accommodations.json"
+    ],
+    "Account": [
+      "https://canvas.instructure.com/doc/api/accounts.json",
+      "https://canvas.instructure.com/doc/api/accounts_(lti).json"
+    ],
+    "AccountCalendar": [
+      "https://canvas.instructure.com/doc/api/account_calendars.json"
+    ],
+    "AccountNotification": [
+      "https://canvas.instructure.com/doc/api/account_notifications.json"
+    ],
+    "Admin": [
+      "https://canvas.instructure.com/doc/api/admins.json"
+    ],
+    "AiExperience": [
+      "https://canvas.instructure.com/doc/api/ai_experiences.json"
+    ],
+    "AnonymousUserDisplay": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "Answer": [
+      "https://canvas.instructure.com/doc/api/quiz_questions.json"
+    ],
+    "Appointment": [
+      "https://canvas.instructure.com/doc/api/appointment_groups.json"
+    ],
+    "AppointmentGroup": [
+      "https://canvas.instructure.com/doc/api/appointment_groups.json"
+    ],
+    "Assessment": [
+      "https://canvas.instructure.com/doc/api/live_assessments.json"
+    ],
+    "AssessmentQuestion": [
+      "https://canvas.instructure.com/doc/api/assessment_question_banks.json"
+    ],
+    "AssessmentQuestionBank": [
+      "https://canvas.instructure.com/doc/api/assessment_question_banks.json"
+    ],
+    "Assignment": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "AssignmentDate": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "AssignmentEvent": [
+      "https://canvas.instructure.com/doc/api/calendar_events.json"
+    ],
+    "AssignmentExtension": [
+      "https://canvas.instructure.com/doc/api/assignment_extensions.json"
+    ],
+    "AssignmentGroup": [
+      "https://canvas.instructure.com/doc/api/assignment_groups.json"
+    ],
+    "AssignmentGroupAttributes": [
+      "https://canvas.instructure.com/doc/api/sis_integration.json"
+    ],
+    "AssignmentGroupGrade": [
+      "https://canvas.instructure.com/doc/api/what_if_grades.json"
+    ],
+    "AssignmentOverride": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "AsyncApiErrorResponse": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "AsyncQueryResponse": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "AsyncQueryResultsResponse": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "AsyncQueryStatusResponse": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "AuthenticationEvent": [
+      "https://canvas.instructure.com/doc/api/authentications_log.json"
+    ],
+    "AuthenticationProvider": [
+      "https://canvas.instructure.com/doc/api/authentication_providers.json"
+    ],
+    "Avatar": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "BankEntryItem": [
+      "https://canvas.instructure.com/doc/api/new_quiz_items.json"
+    ],
+    "BankItem": [
+      "https://canvas.instructure.com/doc/api/new_quiz_items.json"
+    ],
+    "BasicUser": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "BlackoutDate": [
+      "https://canvas.instructure.com/doc/api/blackout_dates.json"
+    ],
+    "BlockEditorTemplate": [
+      "https://canvas.instructure.com/doc/api/block_editor_template.json"
+    ],
+    "BlueprintMigration": [
+      "https://canvas.instructure.com/doc/api/blueprint_courses.json"
+    ],
+    "BlueprintRestriction": [
+      "https://canvas.instructure.com/doc/api/blueprint_courses.json"
+    ],
+    "BlueprintSubscription": [
+      "https://canvas.instructure.com/doc/api/blueprint_courses.json"
+    ],
+    "BlueprintTemplate": [
+      "https://canvas.instructure.com/doc/api/blueprint_courses.json"
+    ],
+    "Bookmark": [
+      "https://canvas.instructure.com/doc/api/bookmarks.json"
+    ],
+    "CalendarEvent": [
+      "https://canvas.instructure.com/doc/api/calendar_events.json"
+    ],
+    "CalendarLink": [
+      "https://canvas.instructure.com/doc/api/courses.json"
+    ],
+    "CareerUserContext": [
+      "https://canvas.instructure.com/doc/api/canvas_career_user_context.json"
+    ],
+    "ChangeRecord": [
+      "https://canvas.instructure.com/doc/api/blueprint_courses.json"
+    ],
+    "Collaboration": [
+      "https://canvas.instructure.com/doc/api/collaborations.json"
+    ],
+    "Collaborator": [
+      "https://canvas.instructure.com/doc/api/collaborations.json"
+    ],
+    "ColumnDatum": [
+      "https://canvas.instructure.com/doc/api/custom_gradebook_columns.json"
+    ],
+    "CommMessage": [
+      "https://canvas.instructure.com/doc/api/comm_messages.json"
+    ],
+    "CommunicationChannel": [
+      "https://canvas.instructure.com/doc/api/communication_channels.json"
+    ],
+    "CompletionRequirement": [
+      "https://canvas.instructure.com/doc/api/modules.json"
+    ],
+    "Conference": [
+      "https://canvas.instructure.com/doc/api/conferences.json"
+    ],
+    "ConferenceRecording": [
+      "https://canvas.instructure.com/doc/api/conferences.json"
+    ],
+    "ContentDetails": [
+      "https://canvas.instructure.com/doc/api/modules.json"
+    ],
+    "ContentExport": [
+      "https://canvas.instructure.com/doc/api/content_exports.json"
+    ],
+    "ContentMigration": [
+      "https://canvas.instructure.com/doc/api/content_migrations.json"
+    ],
+    "ContentShare": [
+      "https://canvas.instructure.com/doc/api/content_shares.json"
+    ],
+    "ContextExternalTool": [
+      "https://canvas.instructure.com/doc/api/external_tools.json"
+    ],
+    "ContextExternalToolMessageSettings": [
+      "https://canvas.instructure.com/doc/api/external_tools.json"
+    ],
+    "ContextExternalToolPlacement": [
+      "https://canvas.instructure.com/doc/api/external_tools.json"
+    ],
+    "ContextSearchResponse": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Conversation": [
+      "https://canvas.instructure.com/doc/api/conversations.json"
+    ],
+    "ConversationParticipant": [
+      "https://canvas.instructure.com/doc/api/conversations.json"
+    ],
+    "Course": [
+      "https://canvas.instructure.com/doc/api/courses.json"
+    ],
+    "CourseAccommodationRequest": [
+      "https://canvas.instructure.com/doc/api/new_quizzes_accommodations.json"
+    ],
+    "CourseAttributes": [
+      "https://canvas.instructure.com/doc/api/sis_integration.json"
+    ],
+    "CourseEpubExport": [
+      "https://canvas.instructure.com/doc/api/e_pub_exports.json"
+    ],
+    "CourseEvent": [
+      "https://canvas.instructure.com/doc/api/course_audit_log.json"
+    ],
+    "CourseEventLink": [
+      "https://canvas.instructure.com/doc/api/course_audit_log.json"
+    ],
+    "CourseNickname": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "CoursePace": [
+      "https://canvas.instructure.com/doc/api/course_pace.json"
+    ],
+    "CourseProgress": [
+      "https://canvas.instructure.com/doc/api/courses.json"
+    ],
+    "CourseQuizExtension": [
+      "https://canvas.instructure.com/doc/api/course_quiz_extensions.json"
+    ],
+    "CreatedEventData": [
+      "https://canvas.instructure.com/doc/api/course_audit_log.json"
+    ],
+    "CustomColumn": [
+      "https://canvas.instructure.com/doc/api/custom_gradebook_columns.json"
+    ],
+    "Day": [
+      "https://canvas.instructure.com/doc/api/gradebook_history.json"
+    ],
+    "DeveloperKey": [
+      "https://canvas.instructure.com/doc/api/developer_keys.json"
+    ],
+    "DeveloperKeyAccountBinding": [
+      "https://canvas.instructure.com/doc/api/developer_key_account_bindings.json"
+    ],
+    "DiscoveryPage": [
+      "https://canvas.instructure.com/doc/api/discovery_pages.json"
+    ],
+    "DiscoveryPageEntry": [
+      "https://canvas.instructure.com/doc/api/discovery_pages.json"
+    ],
+    "DiscussionTopic": [
+      "https://canvas.instructure.com/doc/api/discussion_topics.json"
+    ],
+    "Enrollment": [
+      "https://canvas.instructure.com/doc/api/enrollments.json"
+    ],
+    "EnrollmentTerm": [
+      "https://canvas.instructure.com/doc/api/enrollment_terms.json"
+    ],
+    "EnrollmentTermsList": [
+      "https://canvas.instructure.com/doc/api/enrollment_terms.json"
+    ],
+    "EpubExport": [
+      "https://canvas.instructure.com/doc/api/e_pub_exports.json"
+    ],
+    "ErrorReport": [
+      "https://canvas.instructure.com/doc/api/error_reports.json"
+    ],
+    "EstimatedDuration": [
+      "https://canvas.instructure.com/doc/api/external_tools.json"
+    ],
+    "ExceptionRecord": [
+      "https://canvas.instructure.com/doc/api/blueprint_courses.json"
+    ],
+    "ExperienceSummary": [
+      "https://canvas.instructure.com/doc/api/canvas_career_experiences.json"
+    ],
+    "ExternalFeed": [
+      "https://canvas.instructure.com/doc/api/announcement_external_feeds.json"
+    ],
+    "ExternalToolTagAttributes": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "Favorite": [
+      "https://canvas.instructure.com/doc/api/favorites.json"
+    ],
+    "Feature": [
+      "https://canvas.instructure.com/doc/api/feature_flags.json"
+    ],
+    "FeatureFlag": [
+      "https://canvas.instructure.com/doc/api/feature_flags.json"
+    ],
+    "FederatedAttributeConfig": [
+      "https://canvas.instructure.com/doc/api/authentication_providers.json"
+    ],
+    "FederatedAttributesConfig": [
+      "https://canvas.instructure.com/doc/api/authentication_providers.json"
+    ],
+    "File": [
+      "https://canvas.instructure.com/doc/api/files.json",
+      "https://canvas.instructure.com/doc/api/plagiarism_detection_submissions.json"
+    ],
+    "FileAttachment": [
+      "https://canvas.instructure.com/doc/api/discussion_topics.json"
+    ],
+    "Folder": [
+      "https://canvas.instructure.com/doc/api/files.json"
+    ],
+    "Grade": [
+      "https://canvas.instructure.com/doc/api/enrollments.json",
+      "https://canvas.instructure.com/doc/api/what_if_grades.json"
+    ],
+    "GradeChangeEvent": [
+      "https://canvas.instructure.com/doc/api/grade_change_log.json"
+    ],
+    "GradeChangeEventLinks": [
+      "https://canvas.instructure.com/doc/api/grade_change_log.json"
+    ],
+    "GradeGroup": [
+      "https://canvas.instructure.com/doc/api/what_if_grades.json"
+    ],
+    "Grader": [
+      "https://canvas.instructure.com/doc/api/gradebook_history.json"
+    ],
+    "Grades": [
+      "https://canvas.instructure.com/doc/api/what_if_grades.json"
+    ],
+    "GradingPeriod": [
+      "https://canvas.instructure.com/doc/api/grading_periods.json"
+    ],
+    "GradingPeriodSets": [
+      "https://canvas.instructure.com/doc/api/grading_period_sets.json"
+    ],
+    "GradingRules": [
+      "https://canvas.instructure.com/doc/api/assignment_groups.json"
+    ],
+    "GradingSchemeEntry": [
+      "https://canvas.instructure.com/doc/api/grading_standards.json"
+    ],
+    "GradingStandard": [
+      "https://canvas.instructure.com/doc/api/grading_standards.json"
+    ],
+    "Group": [
+      "https://canvas.instructure.com/doc/api/groups.json"
+    ],
+    "GroupCategory": [
+      "https://canvas.instructure.com/doc/api/group_categories.json"
+    ],
+    "GroupMembership": [
+      "https://canvas.instructure.com/doc/api/groups.json"
+    ],
+    "HelpLink": [
+      "https://canvas.instructure.com/doc/api/accounts.json"
+    ],
+    "HelpLinks": [
+      "https://canvas.instructure.com/doc/api/accounts.json"
+    ],
+    "HistoryEntry": [
+      "https://canvas.instructure.com/doc/api/history.json"
+    ],
+    "InstAccessToken": [
+      "https://canvas.instructure.com/doc/api/inst_access_tokens.json"
+    ],
+    "ItemProperties": [
+      "https://canvas.instructure.com/doc/api/new_quiz_items.json"
+    ],
+    "JSONAPIPagination": [
+      "https://canvas.instructure.com/doc/api/quiz_submission_user_list.json"
+    ],
+    "JWT": [
+      "https://canvas.instructure.com/doc/api/jw_ts.json"
+    ],
+    "LatePolicy": [
+      "https://canvas.instructure.com/doc/api/late_policy.json"
+    ],
+    "LearningObjectDates": [
+      "https://canvas.instructure.com/doc/api/learning_object_dates.json"
+    ],
+    "License": [
+      "https://canvas.instructure.com/doc/api/files.json"
+    ],
+    "LineItem": [
+      "https://canvas.instructure.com/doc/api/line_items.json"
+    ],
+    "ListLtiRegistrationsResponse": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "LockInfo": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "LtiAssignment": [
+      "https://canvas.instructure.com/doc/api/plagiarism_detection_platform_assignments.json"
+    ],
+    "Lti__ContextControl": [
+      "https://canvas.instructure.com/doc/api/lti_context_controls.json"
+    ],
+    "Lti__LaunchDefinition": [
+      "https://canvas.instructure.com/doc/api/lti_launch_definitions.json"
+    ],
+    "Lti__LaunchSettings": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Lti__LegacyConfiguration": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Lti__Overlay": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Lti__OverlayVersion": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Lti__Placement": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Lti__PlacementLaunchDefinition": [
+      "https://canvas.instructure.com/doc/api/lti_launch_definitions.json"
+    ],
+    "Lti__PlacementOverlay": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Lti__Registration": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Lti__RegistrationAccountBinding": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Lti__ResourceLink": [
+      "https://canvas.instructure.com/doc/api/lti_resource_links.json"
+    ],
+    "Lti__ToolConfiguration": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "MediaComment": [
+      "https://canvas.instructure.com/doc/api/submissions.json"
+    ],
+    "MediaObject": [
+      "https://canvas.instructure.com/doc/api/media_objects.json"
+    ],
+    "MediaTrack": [
+      "https://canvas.instructure.com/doc/api/media_objects.json"
+    ],
+    "MigrationIssue": [
+      "https://canvas.instructure.com/doc/api/content_migrations.json"
+    ],
+    "Migrator": [
+      "https://canvas.instructure.com/doc/api/content_migrations.json"
+    ],
+    "Module": [
+      "https://canvas.instructure.com/doc/api/course_pace.json",
+      "https://canvas.instructure.com/doc/api/modules.json"
+    ],
+    "ModuleAssignmentOverride": [
+      "https://canvas.instructure.com/doc/api/modules.json"
+    ],
+    "ModuleItem": [
+      "https://canvas.instructure.com/doc/api/course_pace.json",
+      "https://canvas.instructure.com/doc/api/modules.json"
+    ],
+    "ModuleItemSequence": [
+      "https://canvas.instructure.com/doc/api/modules.json"
+    ],
+    "ModuleItemSequenceNode": [
+      "https://canvas.instructure.com/doc/api/modules.json"
+    ],
+    "MultipleAttemptsSettings": [
+      "https://canvas.instructure.com/doc/api/new_quizzes.json"
+    ],
+    "NamesAndRoleContext": [
+      "https://canvas.instructure.com/doc/api/names_and_role.json"
+    ],
+    "NamesAndRoleMembership": [
+      "https://canvas.instructure.com/doc/api/names_and_role.json"
+    ],
+    "NamesAndRoleMemberships": [
+      "https://canvas.instructure.com/doc/api/names_and_role.json"
+    ],
+    "NamesAndRoleMessage": [
+      "https://canvas.instructure.com/doc/api/names_and_role.json"
+    ],
+    "NeedsGradingCount": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "NewQuiz": [
+      "https://canvas.instructure.com/doc/api/new_quizzes.json"
+    ],
+    "NoticeCatalog": [
+      "https://canvas.instructure.com/doc/api/notice_handlers.json"
+    ],
+    "NoticeHandler": [
+      "https://canvas.instructure.com/doc/api/notice_handlers.json"
+    ],
+    "NotificationPreference": [
+      "https://canvas.instructure.com/doc/api/notification_preferences.json"
+    ],
+    "OriginalityReport": [
+      "https://canvas.instructure.com/doc/api/originality_reports.json"
+    ],
+    "Outcome": [
+      "https://canvas.instructure.com/doc/api/outcomes.json"
+    ],
+    "OutcomeAlignment": [
+      "https://canvas.instructure.com/doc/api/outcome_results.json",
+      "https://canvas.instructure.com/doc/api/outcomes.json"
+    ],
+    "OutcomeGroup": [
+      "https://canvas.instructure.com/doc/api/outcome_groups.json"
+    ],
+    "OutcomeImport": [
+      "https://canvas.instructure.com/doc/api/outcome_imports.json"
+    ],
+    "OutcomeImportData": [
+      "https://canvas.instructure.com/doc/api/outcome_imports.json"
+    ],
+    "OutcomeLink": [
+      "https://canvas.instructure.com/doc/api/outcome_groups.json"
+    ],
+    "OutcomePath": [
+      "https://canvas.instructure.com/doc/api/outcome_results.json"
+    ],
+    "OutcomePathPart": [
+      "https://canvas.instructure.com/doc/api/outcome_results.json"
+    ],
+    "OutcomeResult": [
+      "https://canvas.instructure.com/doc/api/outcome_results.json"
+    ],
+    "OutcomeRollup": [
+      "https://canvas.instructure.com/doc/api/outcome_results.json"
+    ],
+    "OutcomeRollupLinks": [
+      "https://canvas.instructure.com/doc/api/outcome_results.json"
+    ],
+    "OutcomeRollupScore": [
+      "https://canvas.instructure.com/doc/api/outcome_results.json"
+    ],
+    "OutcomeRollupScoreLinks": [
+      "https://canvas.instructure.com/doc/api/outcome_results.json"
+    ],
+    "OverrideTarget": [
+      "https://canvas.instructure.com/doc/api/modules.json"
+    ],
+    "Page": [
+      "https://canvas.instructure.com/doc/api/pages.json"
+    ],
+    "PageRevision": [
+      "https://canvas.instructure.com/doc/api/pages.json"
+    ],
+    "PageView": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "PageViewLinks": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "PairingCode": [
+      "https://canvas.instructure.com/doc/api/user_observees.json"
+    ],
+    "PeerReview": [
+      "https://canvas.instructure.com/doc/api/peer_reviews.json"
+    ],
+    "Permission": [
+      "https://canvas.instructure.com/doc/api/roles.json"
+    ],
+    "PermissionHelpText": [
+      "https://canvas.instructure.com/doc/api/roles.json"
+    ],
+    "PlannerNote": [
+      "https://canvas.instructure.com/doc/api/planner.json"
+    ],
+    "PlannerOverride": [
+      "https://canvas.instructure.com/doc/api/planner.json"
+    ],
+    "Poll": [
+      "https://canvas.instructure.com/doc/api/polls.json"
+    ],
+    "PollChoice": [
+      "https://canvas.instructure.com/doc/api/poll_choices.json"
+    ],
+    "PollSession": [
+      "https://canvas.instructure.com/doc/api/poll_sessions.json"
+    ],
+    "PollSubmission": [
+      "https://canvas.instructure.com/doc/api/poll_submissions.json"
+    ],
+    "Proficiency": [
+      "https://canvas.instructure.com/doc/api/proficiency_ratings.json"
+    ],
+    "ProficiencyRating": [
+      "https://canvas.instructure.com/doc/api/proficiency_ratings.json"
+    ],
+    "Profile": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "Progress": [
+      "https://canvas.instructure.com/doc/api/course_pace.json",
+      "https://canvas.instructure.com/doc/api/new_quizzes_reports.json",
+      "https://canvas.instructure.com/doc/api/progress.json"
+    ],
+    "ProvisionalGrade": [
+      "https://canvas.instructure.com/doc/api/moderated_grading.json"
+    ],
+    "QuestionFeedback": [
+      "https://canvas.instructure.com/doc/api/new_quiz_items.json"
+    ],
+    "QuestionItem": [
+      "https://canvas.instructure.com/doc/api/new_quiz_items.json"
+    ],
+    "Quiz": [
+      "https://canvas.instructure.com/doc/api/quizzes.json"
+    ],
+    "QuizAccommodationRequest": [
+      "https://canvas.instructure.com/doc/api/new_quizzes_accommodations.json"
+    ],
+    "QuizAssignmentOverride": [
+      "https://canvas.instructure.com/doc/api/quiz_assignment_overrides.json"
+    ],
+    "QuizAssignmentOverrideSet": [
+      "https://canvas.instructure.com/doc/api/quiz_assignment_overrides.json"
+    ],
+    "QuizAssignmentOverrideSetContainer": [
+      "https://canvas.instructure.com/doc/api/quiz_assignment_overrides.json"
+    ],
+    "QuizExtension": [
+      "https://canvas.instructure.com/doc/api/quiz_extensions.json"
+    ],
+    "QuizGroup": [
+      "https://canvas.instructure.com/doc/api/quiz_question_groups.json"
+    ],
+    "QuizIPFilter": [
+      "https://canvas.instructure.com/doc/api/quiz_ip_filters.json"
+    ],
+    "QuizItem": [
+      "https://canvas.instructure.com/doc/api/new_quiz_items.json"
+    ],
+    "QuizPermissions": [
+      "https://canvas.instructure.com/doc/api/quizzes.json"
+    ],
+    "QuizQuestion": [
+      "https://canvas.instructure.com/doc/api/quiz_questions.json"
+    ],
+    "QuizReport": [
+      "https://canvas.instructure.com/doc/api/quiz_reports.json"
+    ],
+    "QuizSettings": [
+      "https://canvas.instructure.com/doc/api/new_quizzes.json"
+    ],
+    "QuizStatistics": [
+      "https://canvas.instructure.com/doc/api/quiz_statistics.json"
+    ],
+    "QuizStatisticsAnswerPointBiserial": [
+      "https://canvas.instructure.com/doc/api/quiz_statistics.json"
+    ],
+    "QuizStatisticsAnswerStatistics": [
+      "https://canvas.instructure.com/doc/api/quiz_statistics.json"
+    ],
+    "QuizStatisticsLinks": [
+      "https://canvas.instructure.com/doc/api/quiz_statistics.json"
+    ],
+    "QuizStatisticsQuestionStatistics": [
+      "https://canvas.instructure.com/doc/api/quiz_statistics.json"
+    ],
+    "QuizStatisticsSubmissionStatistics": [
+      "https://canvas.instructure.com/doc/api/quiz_statistics.json"
+    ],
+    "QuizSubmission": [
+      "https://canvas.instructure.com/doc/api/quiz_submissions.json"
+    ],
+    "QuizSubmissionEvent": [
+      "https://canvas.instructure.com/doc/api/quiz_submission_events.json"
+    ],
+    "QuizSubmissionQuestion": [
+      "https://canvas.instructure.com/doc/api/quiz_submission_questions.json"
+    ],
+    "QuizSubmissionUserList": [
+      "https://canvas.instructure.com/doc/api/quiz_submission_user_list.json"
+    ],
+    "QuizSubmissionUserListMeta": [
+      "https://canvas.instructure.com/doc/api/quiz_submission_user_list.json"
+    ],
+    "Report": [
+      "https://canvas.instructure.com/doc/api/account_reports.json",
+      "https://canvas.instructure.com/doc/api/course_reports.json"
+    ],
+    "ReportParameters": [
+      "https://canvas.instructure.com/doc/api/account_reports.json",
+      "https://canvas.instructure.com/doc/api/course_reports.json"
+    ],
+    "Result": [
+      "https://canvas.instructure.com/doc/api/live_assessments.json",
+      "https://canvas.instructure.com/doc/api/result.json"
+    ],
+    "ResultLinks": [
+      "https://canvas.instructure.com/doc/api/live_assessments.json"
+    ],
+    "ResultViewSettings": [
+      "https://canvas.instructure.com/doc/api/new_quizzes.json"
+    ],
+    "Role": [
+      "https://canvas.instructure.com/doc/api/roles.json"
+    ],
+    "RolePermissions": [
+      "https://canvas.instructure.com/doc/api/roles.json"
+    ],
+    "Rubric": [
+      "https://canvas.instructure.com/doc/api/rubrics.json"
+    ],
+    "RubricAssessment": [
+      "https://canvas.instructure.com/doc/api/rubrics.json"
+    ],
+    "RubricAssociation": [
+      "https://canvas.instructure.com/doc/api/rubrics.json"
+    ],
+    "RubricCriteria": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "RubricCriterion": [
+      "https://canvas.instructure.com/doc/api/rubrics.json"
+    ],
+    "RubricRating": [
+      "https://canvas.instructure.com/doc/api/assignments.json",
+      "https://canvas.instructure.com/doc/api/rubrics.json"
+    ],
+    "SSOSettings": [
+      "https://canvas.instructure.com/doc/api/authentication_providers.json"
+    ],
+    "Scope": [
+      "https://canvas.instructure.com/doc/api/api_token_scopes.json"
+    ],
+    "Score": [
+      "https://canvas.instructure.com/doc/api/score.json"
+    ],
+    "ScoreStatistic": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "SearchResult": [
+      "https://canvas.instructure.com/doc/api/smart_search.json"
+    ],
+    "SearchableAccount": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "SearchableCourse": [
+      "https://canvas.instructure.com/doc/api/lti_registrations.json"
+    ],
+    "Section": [
+      "https://canvas.instructure.com/doc/api/sections.json"
+    ],
+    "SectionAssignmentOverrideAttributes": [
+      "https://canvas.instructure.com/doc/api/sis_integration.json"
+    ],
+    "SectionAttributes": [
+      "https://canvas.instructure.com/doc/api/sis_integration.json"
+    ],
+    "SharedBrandConfig": [
+      "https://canvas.instructure.com/doc/api/shared_brand_configs.json"
+    ],
+    "SisAssignment": [
+      "https://canvas.instructure.com/doc/api/sis_integration.json"
+    ],
+    "SisImport": [
+      "https://canvas.instructure.com/doc/api/sis_imports.json"
+    ],
+    "SisImportCounts": [
+      "https://canvas.instructure.com/doc/api/sis_imports.json"
+    ],
+    "SisImportData": [
+      "https://canvas.instructure.com/doc/api/sis_imports.json"
+    ],
+    "SisImportError": [
+      "https://canvas.instructure.com/doc/api/sis_import_errors.json"
+    ],
+    "SisImportStatistic": [
+      "https://canvas.instructure.com/doc/api/sis_imports.json"
+    ],
+    "SisImportStatistics": [
+      "https://canvas.instructure.com/doc/api/sis_imports.json"
+    ],
+    "StimulusItem": [
+      "https://canvas.instructure.com/doc/api/new_quiz_items.json"
+    ],
+    "StudentAttributes": [
+      "https://canvas.instructure.com/doc/api/sis_integration.json"
+    ],
+    "Submission": [
+      "https://canvas.instructure.com/doc/api/plagiarism_detection_submissions.json",
+      "https://canvas.instructure.com/doc/api/submissions.json",
+      "https://canvas.instructure.com/doc/api/what_if_grades.json"
+    ],
+    "SubmissionComment": [
+      "https://canvas.instructure.com/doc/api/submissions.json"
+    ],
+    "SubmissionHistory": [
+      "https://canvas.instructure.com/doc/api/gradebook_history.json"
+    ],
+    "SubmissionVersion": [
+      "https://canvas.instructure.com/doc/api/gradebook_history.json"
+    ],
+    "Tab": [
+      "https://canvas.instructure.com/doc/api/tabs.json"
+    ],
+    "TemporaryEnrollmentPairing": [
+      "https://canvas.instructure.com/doc/api/temporary_enrollment_pairings.json"
+    ],
+    "Term": [
+      "https://canvas.instructure.com/doc/api/courses.json"
+    ],
+    "TermsOfService": [
+      "https://canvas.instructure.com/doc/api/accounts.json"
+    ],
+    "Token": [
+      "https://canvas.instructure.com/doc/api/access_tokens.json"
+    ],
+    "ToolSetting": [
+      "https://canvas.instructure.com/doc/api/originality_reports.json"
+    ],
+    "TurnitinSettings": [
+      "https://canvas.instructure.com/doc/api/assignments.json"
+    ],
+    "UpdatedEventData": [
+      "https://canvas.instructure.com/doc/api/course_audit_log.json"
+    ],
+    "UsageRights": [
+      "https://canvas.instructure.com/doc/api/files.json"
+    ],
+    "User": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "UserAssignmentOverrideAttributes": [
+      "https://canvas.instructure.com/doc/api/sis_integration.json"
+    ],
+    "UserDisplay": [
+      "https://canvas.instructure.com/doc/api/users.json"
+    ],
+    "ePortfolio": [
+      "https://canvas.instructure.com/doc/api/e_portfolios.json"
+    ],
+    "ePortfolioPage": [
+      "https://canvas.instructure.com/doc/api/e_portfolios.json"
+    ]
+  }
+}
