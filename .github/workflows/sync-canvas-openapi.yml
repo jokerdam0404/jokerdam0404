@@ -1,0 +1,95 @@
+name: Sync Canvas OpenAPI
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 7 * * 1"
+  push:
+    paths:
+      - ".github/workflows/sync-canvas-openapi.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Fetch current Canvas OpenAPI spec
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p canvas-openapi
+          tmp="$(mktemp)"
+
+          # Instructure's generator writes this file to public/doc/openapi/canvas.openapi.yaml.
+          # First try Instructure's own Canvas instance.
+          urls=(
+            "https://canvas.instructure.com/doc/openapi/canvas.openapi.yaml"
+            "https://training.instructure.com/doc/openapi/canvas.openapi.yaml"
+          )
+
+          found=""
+          for url in "${urls[@]}"; do
+            echo "Trying $url"
+            if curl --fail --silent --show-error --location --max-time 90 "$url" -o "$tmp"; then
+              if grep -Eq '^openapi:[[:space:]]*["'\''"]?3\.' "$tmp" && [ "$(wc -c < "$tmp")" -gt 100000 ]; then
+                found="$url"
+                break
+              fi
+            fi
+          done
+
+          if [ -z "$found" ]; then
+            echo "No valid generated Canvas OpenAPI spec was available from the checked Instructure endpoints." >&2
+            exit 1
+          fi
+
+          mv "$tmp" canvas-openapi/canvas.openapi.yaml
+          printf '%s\n' "$found" > canvas-openapi/SOURCE_URL.txt
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > canvas-openapi/FETCHED_AT_UTC.txt
+
+      - name: Patch server to Northeastern Canvas and validate YAML
+        shell: bash
+        run: |
+          python -m pip install --quiet pyyaml
+          python <<'PY'
+          from pathlib import Path
+          import yaml
+
+          p = Path("canvas-openapi/canvas.openapi.yaml")
+          data = yaml.safe_load(p.read_text())
+
+          if not isinstance(data, dict):
+              raise SystemExit("Spec is not a YAML object")
+          if not str(data.get("openapi", "")).startswith("3."):
+              raise SystemExit(f"Unexpected OpenAPI version: {data.get('openapi')}")
+          paths = data.get("paths") or {}
+          if len(paths) < 100:
+              raise SystemExit(f"Spec looks incomplete: only {len(paths)} paths")
+
+          data["servers"] = [{
+              "url": "https://canvas.northeastern.edu",
+              "description": "Northeastern University Canvas"
+          }]
+
+          p.write_text(yaml.safe_dump(data, sort_keys=False, allow_unicode=True))
+          print(f"Validated {len(paths)} paths and patched server to Northeastern.")
+          PY
+
+      - name: Commit refreshed spec
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add canvas-openapi/
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "Update Canvas OpenAPI spec"
+          git push
