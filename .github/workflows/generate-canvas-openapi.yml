@@ -30,7 +30,7 @@ jobs:
 
       - name: Generate OpenAPI 3 spec from Instructure live Canvas docs
         env:
-          CANVAS_OPENAPI_SERVER: https://canvas.northeastern.edu/api
+          CANVAS_OPENAPI_SERVER: https://northeastern.instructure.com/api
         run: python tools/generate_canvas_openapi.py
 
       - name: Sanity-check generated document
@@ -42,7 +42,7 @@ jobs:
           p = Path("canvas.openapi.json")
           spec = json.loads(p.read_text())
           assert spec["openapi"].startswith("3.0.")
-          assert spec["servers"][0]["url"] == "https://canvas.northeastern.edu/api"
+          assert spec["servers"][0]["url"] == "https://northeastern.instructure.com/api"
           assert "/v1/courses" in spec["paths"]
           assert "/v1/courses/{course_id}/assignments" in spec["paths"]
           assert "/v1/courses/{course_id}/modules" in spec["paths"]
