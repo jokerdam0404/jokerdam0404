@@ -1,0 +1,74 @@
+name: Generate current Canvas OpenAPI spec
+
+on:
+  push:
+    branches:
+      - canvas-openapi-generated
+    paths:
+      - ".github/workflows/generate-canvas-openapi.yml"
+      - "tools/generate_canvas_openapi.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out generator branch
+        uses: actions/checkout@v4
+        with:
+          ref: canvas-openapi-generated
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate OpenAPI 3 spec from Instructure live Canvas docs
+        env:
+          CANVAS_OPENAPI_SERVER: https://canvas.northeastern.edu/api
+        run: python tools/generate_canvas_openapi.py
+
+      - name: Sanity-check generated document
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("canvas.openapi.json")
+          spec = json.loads(p.read_text())
+          assert spec["openapi"].startswith("3.0.")
+          assert spec["servers"][0]["url"] == "https://canvas.northeastern.edu/api"
+          assert "/v1/courses" in spec["paths"]
+          assert "/v1/courses/{course_id}/assignments" in spec["paths"]
+          assert "/v1/courses/{course_id}/modules" in spec["paths"]
+          assert spec["components"]["securitySchemes"]["bearerAuth"]["scheme"] == "bearer"
+
+          meta = json.loads(Path("canvas.openapi.meta.json").read_text())
+          assert meta["resource_count"] >= 100
+          assert meta["operation_count"] >= 500
+          print(json.dumps({
+              "resources": meta["resource_count"],
+              "paths": meta["path_count"],
+              "operations": meta["operation_count"],
+              "schemas": meta["schema_count"],
+              "bytes": meta["output_bytes"],
+              "sha256": meta["sha256"],
+          }, indent=2))
+          PY
+
+      - name: Commit generated spec
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add canvas.openapi.json canvas.openapi.meta.json
+          if git diff --cached --quiet; then
+            echo "Generated spec is unchanged."
+          else
+            git commit -m "Generate current Canvas OpenAPI spec"
+            git push origin HEAD:canvas-openapi-generated
+          fi
