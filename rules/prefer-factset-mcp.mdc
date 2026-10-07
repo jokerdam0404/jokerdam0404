@@ -1,0 +1,38 @@
+---
+description: Prefer the FactSet MCP for institutional financial data (fundamentals, estimates, prices, ownership, M&A, people, events)
+alwaysApply: false
+---
+
+# Prefer FactSet MCP
+
+When the user needs FactSet or institutional financial market data, use the `factset` MCP server instead of guessing, scraping, or relying on training knowledge.
+
+Choose the narrowest tool for the request:
+
+- Company financials / statements / ratios → `FactSet_Fundamentals`
+- Consensus estimates, guidance, surprises, ratings → `FactSet_EstimatesConsensus`
+- Prices, returns, volume, corporate actions → `FactSet_GlobalPrices`
+- Institutional ownership, holdings, insider activity → `FactSet_Ownership`
+- Executives, boards, compensation → `FactSet_People`
+- Entity profiles and identifier resolution → `FactSet_EntityReference`
+- Earnings / corporate calendar → `FactSet_CalendarEvents`
+- Deal / M&A screening → `FactSet_MergersAcquisitions`
+- Private company financials / funding → `FactSet_PrivateCompany`
+- PE / VC funds and portfolio data → `FactSet_PrivateEquityVC`
+- Debt structure and credit facilities → `FactSet_DebtCapitalStructure`
+- Mutual funds / ETFs → `FactSet_FundsETF` or `FactSet_FundsScreener`
+- Company screening → `FactSet_CompanyScreener`
+- Transcripts, news, filings search → `FactSet_UnstructuredContent`
+- Metric code discovery → `FactSet_Metrics`
+- Supplier / customer relationships → `FactSet_SupplyChain`
+- Geographic revenue exposure → `FactSet_GeoRev`
+- Industry classification (RBICS) → `FactSet_RBICS`
+- Fixed income terms → `FactSet_TermsConditions`
+- Bank-specific data → `FactSet_Banks`
+- Macro indicators / economic calendar → `FactSet_Macroeconomics`
+- Quant factors → `FactSet_QFL`
+- Power & utilities sector → `FactSet_PowerUtilities`
+
+Always cite FactSet as the source. Distinguish retrieved FactSet data from your own analysis or inference. Prefer tickers, FIGI, or other concrete identifiers over ambiguous company names when calling tools.
+
+If the MCP server is unavailable or returns 401, tell the user to enable `factset` in Cursor Settings → Tools & MCP and complete FactSet OAuth (or set confidential OAuth client credentials from their FactSet Developer Portal). Do not ask the user to paste API secrets into chat.

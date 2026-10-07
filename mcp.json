@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "factset": {
+      "type": "http",
+      "url": "https://mcp.factset.com/content/v1"
+    }
+  }
+}

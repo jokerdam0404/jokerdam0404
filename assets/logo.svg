@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="FactSet">
+  <rect width="128" height="128" rx="24" fill="#003057"/>
+  <path fill="#FFFFFF" d="M34 34h60v14H48v14h40v14H48v18H34V34z"/>
+  <rect x="34" y="92" width="60" height="8" fill="#00A9E0"/>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "name": "factset",
+  "displayName": "FactSet",
+  "version": "1.0.0",
+  "description": "Connect Cursor to FactSet AI-Ready Data MCP for fundamentals, estimates, prices, ownership, M&A, people, events, and more institutional financial data.",
+  "author": {
+    "name": "FactSet",
+    "url": "https://developer.factset.com/mcp"
+  },
+  "homepage": "https://developer.factset.com/mcp/factset-ai-ready-data-mcp",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "factset",
+    "mcp",
+    "finance",
+    "fundamentals",
+    "estimates",
+    "pricing",
+    "ownership",
+    "equities",
+    "market-data",
+    "financial-data"
+  ],
+  "category": "data-analytics",
+  "tags": ["finance", "mcp", "market-data", "fundamentals"],
+  "rules": "./rules/",
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "mcpServers": "./mcp.json"
+}

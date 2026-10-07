@@ -1,0 +1,13 @@
+---
+description: Safe handling rules when querying FactSet financial data through MCP
+alwaysApply: false
+---
+
+# FactSet data hygiene
+
+- Only request the fields, periods, and identifiers needed for the user's question.
+- Do not fabricate fundamentals, estimates, prices, or ownership figures. If a tool call fails or returns empty, say so.
+- Preserve units, currencies, as-of dates, and fiscal period labels from FactSet responses.
+- When comparing companies, use the same metric definitions and periods.
+- Treat entitlement / authorization errors as account limits, not data absence.
+- Do not store or echo OAuth client secrets, refresh tokens, or raw auth headers in chat, commits, or files.
