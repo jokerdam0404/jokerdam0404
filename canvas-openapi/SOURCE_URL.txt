@@ -1,0 +1,1 @@
+https://training.instructure.com/doc/openapi/canvas.openapi.yaml
